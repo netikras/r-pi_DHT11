@@ -9,8 +9,9 @@ In step 1 util used sleep(xx) between polling each bit which resulted in lots of
 
 In this variation I actively poll 1000 bits from the sensor w/o any timeouts. Of course lots of bits do repeat. I divide the array into blocks of ones (HIs) and calculate average length of those blocks. Each block longer than avg will represent HI and every one shorter than avg -- LO. Like that:
 
-11111111111100000011111100000000001111111111111110000000111110000011111100000011111111111111111
-    1               0                    1                0          0               1
+    11111111111100000011111100000000001111111111111110000000111110000011111100000011111111111111111
+
+        1               0                    1                0          0               1
 becomes
 
 101001
